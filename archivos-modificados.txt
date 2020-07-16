@@ -1,0 +1,61 @@
+vistas:
+	home.blade.php
+	viewUsuario.blade.php
+	admin/edit/edituser
+	admin/edit/editDieta
+	admin/edit/editNotas
+	usuariosInactivos
+	listUsuarios
+	formUser
+	gruposmusculare\*
+	Entrenamiento/edit/edit
+	farmacos/edit/farmaco
+	suplemento/edit/suplemento
+
+
+
+
+Controladores
+	UsuariosController
+	EntrenamientoController
+	DietaController
+	FarmacosController
+	SuplementosController
+	HomeController
+	GruposmuscularesController
+
+Modelos
+	Entrenamiento_ejercicio
+	Entrenamiento
+	Datos_usuario
+	Suplementos
+	Farmacologia
+	Dieta
+	Grupos_musculare
+	
+
+rutas: 
+Route::get('/usuariosInactivos', 'UsuariosController@UsuariosInactivos')->middleware('auth');
+Route::resource('/gruposmusculares', 'Gruposmusculares\GruposmuscularesController')->middleware('auth');
+
+
+JS
+<script src="{!! asset('assets/datatables/datatables_advanced.js') !!}"></script>
+
+
+
+
+
+
+las tablas dieta y entrenamiento llevan notas y fecha de creaccion, pero las tablas suplementos y farmacologia solo va fecha
+opcion: colocar los campos fecha_suplemento y fecha_farmacologia en la tabla datos usuarios 
+
+tengo que modificar el guardado del link del ejercicio, ya que solo se va a guardar el link sin la etiqueda.
+
+
+
+
+
+
+1: modificar datos de usuarios en panel usuario
+2:
